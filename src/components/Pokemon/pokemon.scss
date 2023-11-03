@@ -1,0 +1,57 @@
+.pokemon {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 4px 2px 0px rgba(0,0,0,0.5);
+
+    .name {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .pokedex {
+        background-color: blue;
+        color: white;
+        padding: 2px 12px;
+        border-radius: 5px;
+    }
+
+    p {
+        display: inline;
+        margin-right: 5px;
+        font-weight: bold;
+    }
+
+    .fire {
+        background-color: red;
+        color: white;
+        padding: 2px 12px;
+        border-radius: 5px;
+    }
+
+    .poison {
+        background-color: purple;
+        color: white;
+        padding: 2px 12px;
+        border-radius: 5px;
+    }
+
+    .grass {
+        background-color: green;
+        color: white;
+        padding: 2px 12px;
+        border-radius: 5px;
+    }
+
+    .water {
+        background-color: blue;
+        color: white;
+        padding: 2px 12px;
+        border-radius: 5px;
+    }
+}
