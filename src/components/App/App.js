@@ -1,14 +1,15 @@
-import React, { createContext, useState } from 'react';
-
-import logo from '../../logo.svg';
+import React, { createContext} from 'react';
 import './App.css';
-import Box from '../Box/Box';
 import Home from '../../pages/home';
 import Episodes from '../../pages/episodes';
 import Pokemones from '../../pages/pokemones';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainLayout from '../../layouts/MainLayout';
 import Test from '../../pages/test';
+import Disney from '../../pages/disney';
+import PostCreate from '../../pages/post/create';
+import Blog from '../../pages/blog';
+import PostView from '../../pages/post/view';
 
 export const GradesContext = createContext();
 
@@ -19,6 +20,9 @@ function App() {
         <Route path="/" element={<MainLayout />} >
           <Route index element={<Home />} />
         </Route>
+        <Route path="/disney" element={<MainLayout />} >
+          <Route index element={<Disney />} />
+        </Route>
         <Route path="/pokemones" element={<MainLayout />} >
           <Route index element={<Pokemones />} />
         </Route>
@@ -27,6 +31,13 @@ function App() {
         </Route>
         <Route path="/test" element={<MainLayout />} >
           <Route path=":param" element={<Test />} />
+        </Route>
+        <Route path="/blog" element={<MainLayout />} >
+          <Route index element={<Blog />} />
+        </Route>
+        <Route path="/post" element={<MainLayout />} >
+          <Route path=":id" element={<PostView />} />
+          <Route path="create" element={<PostCreate />} />
         </Route>
       </Routes>
     </BrowserRouter>
